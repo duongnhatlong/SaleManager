@@ -3,18 +3,18 @@ package com.team2.salemanager.SqliteHelper;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import com.team2.salemanager.DAO.UserDAO;
 
 public class SqliteHelper extends SQLiteOpenHelper {
 
-    public static final String DATABASE_NAME = "MobileSale";
-    public static final int VERSION = 1;
     public SqliteHelper(Context context) {
-        super(context, DATABASE_NAME, null, VERSION);
-
+        super(context, "SaleManager", null, 1);
     }
+
     @Override
     public void onCreate(SQLiteDatabase db) {
-
+        // Tạo bảng
+        db.execSQL(UserDAO.SQL_NGUOI_DUNG);
     }
 
     @Override

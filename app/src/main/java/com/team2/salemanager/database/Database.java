@@ -7,8 +7,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 /**
  * Created By JohnNguyen - Onesoft on 28/11/2018
  */
-public class UserDB extends SQLiteOpenHelper {
-    public UserDB(Context context) {
+public class Database extends SQLiteOpenHelper {
+    public Database(Context context) {
         super(context, "User", null, 1);
     }
 
@@ -17,7 +17,8 @@ public class UserDB extends SQLiteOpenHelper {
         String sqlUser = "CREATE TABLE User(Id integer primary key ," + "Name text, Birth text, Address text, Phone text, Image blob)";
         db.execSQL(sqlUser);
 
-        String sqlAdmin = "CREATE TABLE Admin"
+        String sqlAdmin = "CREATE TABLE Admin(Id integer primary key ," + "Name text, Birth text, Address text, Phone text, Image blob, Role text)";
+        db.execSQL(sqlAdmin);
 
     }
 

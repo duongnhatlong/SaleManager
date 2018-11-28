@@ -1,4 +1,4 @@
-package com.team2.salemanager.DAO;
+package com.team2.salemanager.dao;
 
 import android.database.sqlite.SQLiteDatabase;
 
